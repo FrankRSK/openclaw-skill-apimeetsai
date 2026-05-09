@@ -1,20 +1,41 @@
-# OpenClaw Skill: API Meets AI (apimeetsai.com)
+# apimeetsai-skill
 
-**Keyless • Token-effizient • Stark deutschfokussiert**
+**OpenClaw Skill** für die [API Meets AI Gateway](https://apimeetsai.com/) – ein keyless, AI-optimierter API-Gateway für aktuelle deutschsprachige Daten.
 
-Dieser Skill gibt OpenClaw-Agenten schnellen Zugriff auf einen speziell für LLMs optimierten API-Gateway. Er liefert strukturierte, aktuelle Daten zu vielen alltäglichen Themen – ohne API-Key, mit minimalem Token-Verbrauch.
+## Features
 
-### Unterstützte Themen
-- **Wetter** & DWD-Warnungen (Deutschland + weltweit)
-- **Sport** — besonders Bundesliga, Tabellen, Ergebnisse
-- **Finanzen** — ECB-Wechselkurse, Kryptowährungen
-- **Allgemeinwissen** — Wikipedia-Zusammenfassungen, „Was ist heute in der Geschichte passiert?“
-- **Politik** — Deutsche Politiker-Profile, Bundestag, Abstimmungen (sehr stark deutschlastig)
-- **Geodaten & POI** — Apotheken, Restaurants, Ortssuche (OpenStreetMap)
-- **News** — Aktuelle Schlagzeilen
-- **Pegelstände** deutscher Flüsse
+| Bereich | Modul | Quellen |
+|---------|-------|---------|
+| 🌤️ Wetter | `wetter`, `dwd` | Open-Meteo, DWD (Brightsky) |
+| ⚽ Sport | `sport` | OpenLigaDB (Bundesliga, DFB, CL) |
+| 💰 Finanzen | `waehrungen`, `krypto` | EZB, CoinGecko |
+| 📚 Wissen | `wikipedia` | Wikimedia REST API |
+| 🏛️ Politik | `politik` | DAWUM (Wahlumfragen), DIP (Bundestag), Abgeordnetenwatch |
+| 🛣️ Autobahn | `autobahn` | Autobahn GmbH |
+| 🚨 Blaulicht | `blaulicht` | Presseportal.de (NRW flächendeckend) |
+| 🎪 Events | `events` | Stadt Köln Open Data |
+| 📍 Geo | `geo` | OpenStreetMap (Nominatim/Overpass) |
+| 📰 News | `news` | RSS-Aggregator (BBC, DW, Spiegel u.a.) |
+| 🌊 Pegel | `pegel` | WSV Pegelonline |
 
-### Installation
+## Version
 
-1. Klone das Repository oder lade die Datei herunter.
-2. Kopiere den Ordner `apimeetsai` in deinen OpenClaw Skills-Ordner:
+**v2.0.0** – Neu: Autobahn, Blaulicht NRW, Events Köln, DAWUM-Wahlumfragen, DIP-Bundestag
+
+## Installation
+
+```bash
+# Via ClawHub (sobald verfügbar)
+openclaw claw install apimeetsai
+
+# Manuell
+cp SKILL.md /pfad/zu/deinen/skills/apimeetsai/
+```
+
+## Nutzung
+
+Siehe [SKILL.md](SKILL.md) für die vollständige Dokumentation aller Endpunkte.
+
+## Lizenz
+
+MIT
